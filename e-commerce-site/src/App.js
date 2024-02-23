@@ -1,20 +1,43 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React, { useState } from "react";
+import Header from "./Components/Header";
+import HomePage from "./Components/HomePage";
+import CheckoutPage from "./Components/CheckoutPage";
+import Footer from "./Components/Footer";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("home");
+
+  const navigateTo = (page) => {
+    setCurrentPage(page);
+  };
+  const headerItems = [
+    { className: "header-logo-box", text: "LOGO" },
+    { className: "header-username-box", text: "UserName" },
+    { className: "header-credit-box", text: "Credit" },
+    { className: "header-welcome-box", text: "Welcome, " },
+    { className: "header-spend-summary-box", text: "Total" },
+  ];
+  const footerItems = [{ className: "footer-home-box" }];
+
+  let appContent;
+  switch (currentPage) {
+    case "home":
+      appContent = <HomePage />;
+      break;
+    case "checkout":
+      appContent = <CheckoutPage />;
+      break;
+    default:
+      appContent = <HomePage />;
+  }
+
   return (
-    <>
-      <div className="App">
-        <header className="App-header">
-          <div className="header-box">Logo Box</div>
-          <div className="header-box">Username</div>
-          <div className="header-box">Credit: £0.00</div>
-          <div className="header-box">Hello, Username</div>
-          <div className="header-box">Box 5</div>
-        </header>
-      </div>
-      <div className="main-container">Here is an AWESOME E-COMMERCE site</div>
-    </>
+    <div className="App">
+      <Header headerItems={headerItems} />
+      {appContent}
+      <Footer footerItems={footerItems} />
+    </div>
   );
 }
 

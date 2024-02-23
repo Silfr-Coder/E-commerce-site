@@ -1,24 +1,103 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  background-color: #ebe9ec;
 }
 
-.App-header {
-  background-color: lightcyan;
+/* header items CSS */
+.header-container {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: max-content;
   gap: 10px;
   justify-content: space-around;
-  color: black;
-  margin-left: 0px;
+  margin: 1px;
+  padding: 10px;
+  background-color: #d2afff;
 }
 
-.header-box {
+.header-logo-box {
   border: 1px solid black;
   width: 200px;
   height: 50px;
-  background-color: lightcyan;
   margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 50px;
+  background-color: #dcffaf;
+  box-shadow: 5px 10px #888888;
+  text-align: center;
+}
+.header-logo-box:hover {
+  color: darkmagenta;
+  box-shadow: 20px black;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.header-username-box {
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 50px;
+  box-shadow: 5px 10px #888888;
+  text-align: center;
+  align-items: center;
+}
+.header-credit-box {
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 50px;
+  box-shadow: 5px 10px #888888;
+  text-align: center;
+}
+.header-welcome-box {
+  width: 350px;
+  height: 50px;
+
+  margin-bottom: 10px;
+  margin-left: 25vw;
+  margin-right: auto;
+  grid-column: span 2;
+  font-size: larger;
+  text-align: left;
+  box-shadow: 25%;
+  background-color: #d2afff;
+}
+.header-spend-summary-box {
+  border: 1px solid #000000;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 50px;
+  box-shadow: 5px 10px #888888;
+  text-align: center;
+}
+
+/* footer items CSS*/
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: max-content;
+  gap: 10px;
+  justify-content: space-around;
+  margin: 1px;
+  background-color: #d2afff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.footer-home-box {
+  border: 1px solid black;
+  width: 200px;
+  height: 20px;
+  justify-content: center;
 }

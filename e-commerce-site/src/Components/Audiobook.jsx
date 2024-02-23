@@ -27,5 +27,7 @@ let ultraProcessedPeople = new Audiobook(
 // create a list of all the books to export
 const audiobookList = [atomicHabits, ultraProcessedPeople];
 
-// export the audiobookList list of objects as a React component
-export default audiobookList;
+// export audiobookList as a named export, a list of objects as a React component
+export { audiobookList };
+// export as the default export
+export default Audiobook;

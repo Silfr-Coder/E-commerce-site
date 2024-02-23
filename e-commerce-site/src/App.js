@@ -4,8 +4,7 @@ import Header from "./Components/Header";
 import HomePage from "./Components/HomePage";
 import CheckoutPage from "./Components/CheckoutPage";
 import Footer from "./Components/Footer";
-import Audiobook from "./Components/Audiobook";
-import { audiobookList } from "./Components/Audiobook";
+import Audiobook, { audiobookList } from "./Components/Audiobook";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");

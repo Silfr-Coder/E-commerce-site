@@ -5,7 +5,9 @@ function Footer({ footerItems }) {
     <>
       <header className="footer-container">
         {footerItems.map((box, index) => (
-          <div key={index} className={box.className}></div>
+          <div key={index} className={box.className}>
+            {box.text}
+          </div>
         ))}
       </header>
     </>

@@ -18,7 +18,10 @@ function App() {
     { className: "header-welcome-box", text: "Welcome, " },
     { className: "header-spend-summary-box", text: "Total" },
   ];
-  const footerItems = [{ className: "footer-home-box" }];
+  const footerItems = [
+    { className: "footer-home" },
+    { className: "footer-top-of-page" },
+  ];
 
   let appContent;
   switch (currentPage) {

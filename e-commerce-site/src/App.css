@@ -12,7 +12,7 @@
   justify-content: space-around;
   margin: 1px;
   padding: 10px;
-  background-color: #d2afff;
+  background-color: #028ff0;
 }
 
 .header-logo-box {
@@ -22,8 +22,8 @@
   margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 50px;
-  background-color: #dcffaf;
-  box-shadow: 5px 10px #888888;
+  background-color: #ffd700;
+  box-shadow: 5px 10px #555353;
   text-align: center;
 }
 .header-logo-box:hover {
@@ -40,9 +40,10 @@
   margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 50px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #555353;
   text-align: center;
   align-items: center;
+  background-color: #ffd700;
 }
 .header-credit-box {
   border: 1px solid black;
@@ -51,8 +52,9 @@
   margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 50px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #555355;
   text-align: center;
+  background-color: #ffd700;
 }
 .header-welcome-box {
   width: 350px;
@@ -65,7 +67,7 @@
   font-size: larger;
   text-align: left;
   box-shadow: 25%;
-  background-color: #d2afff;
+  background-color: #028ff0;
 }
 .header-spend-summary-box {
   border: 1px solid #000000;
@@ -74,17 +76,18 @@
   margin-bottom: 10px;
   margin-left: 0px;
   margin-right: 50px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #555355;
   text-align: center;
+  background-color: #ffd700;
 }
 
 /* footer items CSS*/
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(1, 100px);
+  grid-template-columns: repeat(2, 200px);
   grid-template-rows: max-content;
   gap: 10px;
-  justify-content: space-around;
+  justify-content: center;
   margin: 1px;
   background-color: #d2afff;
   position: fixed;
@@ -95,9 +98,21 @@
   text-align: center;
   padding: 10px 0;
 }
-.footer-home-box {
+.footer-home {
   border: 1px solid black;
   width: 200px;
   height: 20px;
   justify-content: center;
+  background-color: #ffd700;
+  box-shadow: 5px 10px #555355;
+  text-align: center;
+}
+.footer-top-of-page {
+  border: 1px solid black;
+  width: 200px;
+  height: 20px;
+  justify-content: center;
+  background-color: #ffd700;
+  box-shadow: 5px 10px #555355;
+  text-align: center;
 }

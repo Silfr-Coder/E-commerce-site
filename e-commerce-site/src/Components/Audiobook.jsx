@@ -1,12 +1,14 @@
+//  create a template for audiobooks
 class Audiobook {
-  constructor(title, author, narrator, length, language, summary) {
+  constructor(title, author, narrator, bookLength, language, summary) {
     this.title = title;
     this.author = author;
-    this.length = length;
+    this.bookLength = bookLength;
     this.language = language;
     this.summary = summary;
   }
 }
+//  Creating instances of the audiobooks
 let atomicHabits = new Audiobook(
   "Atom Habits",
   "James Clear",
@@ -22,6 +24,8 @@ let ultraProcessedPeople = new Audiobook(
   "Why Do We All Eat Stuff That Isn’t Food...and Why Can’t We Stop?"
 );
 
-audiobookList = [atomicHabits, ultraProcessedPeople];
+// create a list of all the books to export
+const audiobookList = [atomicHabits, ultraProcessedPeople];
 
+// export the audiobookList list of objects as a React component
 export default audiobookList;

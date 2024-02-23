@@ -4,13 +4,15 @@ import Header from "./Components/Header";
 import HomePage from "./Components/HomePage";
 import CheckoutPage from "./Components/CheckoutPage";
 import Footer from "./Components/Footer";
+import Audiobook from "./Components/Audiobook";
+import { audiobookList } from "./Components/Audiobook";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
 
-  const navigateTo = (page) => {
-    setCurrentPage(page);
-  };
+  // const navigateTo = (page) => {
+  //   setCurrentPage(page);
+  // };
   const headerItems = [
     { className: "header-logo-box", text: "LOGO" },
     { className: "header-username-box", text: "UserName" },
@@ -36,11 +38,27 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header headerItems={headerItems} />
-      {appContent}
-      <Footer footerItems={footerItems} />
-    </div>
+    <>
+      <div className="App">
+        {/* render header here */}
+        <Header headerItems={headerItems} />
+        {appContent}
+        /** Render audiobooks here, getting the list of audiobook objects from
+        Audiobook.js using .map to display each book on the list */
+        {audiobookList.map((audiobook, index) => (
+          <Audiobook
+            key={index}
+            title={audiobook.title}
+            author={audiobook.author}
+            bookLength={audiobook.bookLength}
+            language={audiobook.language}
+            summary={audiobook.summary}
+          />
+        ))}
+        {/* display footer here */}
+        <Footer footerItems={footerItems} />
+      </div>
+    </>
   );
 }
 
